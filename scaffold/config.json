@@ -1,0 +1,8 @@
+{
+  "executors": [
+    {
+      "id": "csv2json_default",
+      "type": "@runnerty-executor-csv2json"
+    }
+  ]
+}

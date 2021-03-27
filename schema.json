@@ -1,0 +1,87 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "@runnerty-executor-csv2json",
+  "definitions": {
+    "config": {
+      "type": "object",
+      "required": ["id", "type"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "pattern": "@runnerty-executor-csv2json"
+        }
+      }
+    },
+    "params": {
+      "type": "object",
+      "required": ["id", "inputPath"],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "inputPath": {
+          "type": "string"
+        },
+        "outputPath": {
+          "type": "string"
+        },
+        "options": {
+          "type": "object",
+          "properties": {
+            "delimiter": {
+              "type": "string"
+            },
+            "quote": {
+              "type": "string"
+            },
+            "escape": {
+              "type": "string"
+            },
+            "headers": {
+              "type": ["boolean", "array"]
+            },
+            "renameHeaders": {
+              "type": "boolean"
+            },
+            "ignoreEmpty": {
+              "type": "boolean"
+            },
+            "comment": {
+              "type": "string"
+            },
+            "discardUnmappedColumns": {
+              "type": "boolean"
+            },
+            "strictColumnHandling": {
+              "type": "boolean"
+            },
+            "trim": {
+              "type": "boolean"
+            },
+            "rtrim": {
+              "type": "boolean"
+            },
+            "ltrim": {
+              "type": "boolean"
+            },
+            "encoding": {
+              "type": "string"
+            },
+            "maxRows": {
+              "type": "number"
+            },
+            "skipRows": {
+              "type": "number"
+            },
+            "skipLines": {
+              "type": "number"
+            }
+          }
+        }
+      }
+    }
+  }
+}

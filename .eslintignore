@@ -1,0 +1,8 @@
+.vscode
+api
+node_modules
+samples
+*.md
+*.spec.js
+LICENSE
+.DS_Store
