@@ -108,7 +108,7 @@ Add in [plan.json]:
 - `PROCESS_EXEC_ERR_OUTPUT`: Error output message.
 #### Data output
 - `PROCESS_EXEC_DATA_OUTPUT`: JSON output data.
-- `PROCESS_EXEC_DB_ROWCOUNT`: MySQL query count rows.
+- `PROCESS_EXEC_DB_ROWCOUNT`: Count rows.
 ### More information:
 
 This executor uses the fast-csv module, for more information consult the website of the [csv2json].
