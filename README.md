@@ -83,32 +83,35 @@ Add in [plan.json]:
 
 #### Options
 
-| Option                 | Description                                                                                                                                |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| delimiter              | The delimiter that will separate columns. Default: ','                                                                                     |
-| quote                  | The character to use to quote fields that contain a delimiter. Default: '"'                                                                |
-| escape                 | The character to used tp escape quotes inside of a quoted field. Default: '"'                                                              |
-| headers                | If set to true the first row will be treated as the headers. If you want to manually specify the headers set to a string[]. Default: true  |
-| renameHeaders          | If you want the first line of the file to be removed and replaced by the one provided in the headers option. Default: false                |
-| ignoreEmpty            | Set to true to ignore empty rows. Default: false                                                                                           |
-| comment                | If your CSV contains comments you can use this option to ignore lines that begin with the specified character. Default: null               |
-| discardUnmappedColumns | If you want to discard columns that do not map to a header. Default: false                                                                 |
-| strictColumnHandling   | If you want to consider empty lines/lines with too few fields as invalid and emit a data-invalid event. Default: false                     |
-| trim                   | Set to true to trim all white space from columns. Default: false                                                                           |
-| rtrim                  | Set to true to right trim all columns. Default: false                                                                                      |
-| ltrim                  | Set to true to left trim all columns. Default: false                                                                                       |
-| encoding               | Passed to StringDecoder when decoding incoming buffers. Change if incoming content is not 'utf8' encoded. Default: 'utf8'                  |
-| maxRows                | If number is > 0 then only the specified number of rows will be parsed. Default: 0                                                         |
-| skipRows               | If number is > 0 then the specified number of parsed rows will be skipped. Default: 0                                                      |
-| skipLines              | If number is > 0 the specified number of lines will be skipped. Default: 0                                                                 |
+| Option                 | Description                                                                                                                               |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| delimiter              | The delimiter that will separate columns. Default: ','                                                                                    |
+| quote                  | The character to use to quote fields that contain a delimiter. Default: '"'                                                               |
+| escape                 | The character to used tp escape quotes inside of a quoted field. Default: '"'                                                             |
+| headers                | If set to true the first row will be treated as the headers. If you want to manually specify the headers set to a string[]. Default: true |
+| renameHeaders          | If you want the first line of the file to be removed and replaced by the one provided in the headers option. Default: false               |
+| ignoreEmpty            | Set to true to ignore empty rows. Default: false                                                                                          |
+| comment                | If your CSV contains comments you can use this option to ignore lines that begin with the specified character. Default: null              |
+| discardUnmappedColumns | If you want to discard columns that do not map to a header. Default: false                                                                |
+| strictColumnHandling   | If you want to consider empty lines/lines with too few fields as invalid and emit a data-invalid event. Default: false                    |
+| trim                   | Set to true to trim all white space from columns. Default: false                                                                          |
+| rtrim                  | Set to true to right trim all columns. Default: false                                                                                     |
+| ltrim                  | Set to true to left trim all columns. Default: false                                                                                      |
+| encoding               | Passed to StringDecoder when decoding incoming buffers. Change if incoming content is not 'utf8' encoded. Default: 'utf8'                 |
+| maxRows                | If number is > 0 then only the specified number of rows will be parsed. Default: 0                                                        |
+| skipRows               | If number is > 0 then the specified number of parsed rows will be skipped. Default: 0                                                     |
+| skipLines              | If number is > 0 the specified number of lines will be skipped. Default: 0                                                                |
 
 ### Output (Process values):
 
 - `PROCESS_EXEC_MSG_OUTPUT`: Output message.
 - `PROCESS_EXEC_ERR_OUTPUT`: Error output message.
+
 #### Data output
+
 - `PROCESS_EXEC_DATA_OUTPUT`: JSON output data.
 - `PROCESS_EXEC_DB_ROWCOUNT`: Count rows.
+
 ### More information:
 
 This executor uses the fast-csv module, for more information consult the website of the [csv2json].
