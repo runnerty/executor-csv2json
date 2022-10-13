@@ -1,6 +1,6 @@
 {
   "name": "@runnerty/executor-csv2json",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Runnerty module: CSV2JSON executor",
   "author": "Runnerty Tech",
   "license": "MIT",
