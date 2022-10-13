@@ -1,8 +1,9 @@
 'use strict';
 
 const fs = require('fs');
+const once = require('node:events').once;
 const csv = require('@fast-csv/parse');
-const jsonStreamStringify = require('json-stream-stringify');
+const JsonStreamStringify = require('json-stream-stringify');
 
 const Executor = require('@runnerty/module-core').Executor;
 
@@ -38,11 +39,12 @@ class csv2jsonExecutor extends Executor {
         .on('data', row => {
           jsonResult.push(row);
         })
-        .on('end', rowCount => {
+        .on('end', async rowCount => {
           // JSON Export
           if (params.outputPath) {
             const streamJSON = fs.createWriteStream(params.outputPath);
-            new jsonStreamStringify(jsonResult).pipe(streamJSON);
+            const jsonStream = new JsonStreamStringify(jsonResult).pipe(streamJSON);
+            await once(jsonStream, 'close');
           }
           //STANDARD OUPUT:
           this.endOptions.data_output = jsonResult || '';
