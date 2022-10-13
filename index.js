@@ -3,7 +3,7 @@
 const fs = require('fs');
 const once = require('node:events').once;
 const csv = require('@fast-csv/parse');
-const JsonStreamStringify = require('json-stream-stringify');
+const JsonStreamStringify = require('json-stream-stringify').JsonStreamStringify;
 
 const Executor = require('@runnerty/module-core').Executor;
 
